@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-with, initial-scale=1" />
+    <title>Guess the Number</title>
+    <banner>
+      <img src="00 (3).png" />
+      <div class="wrapper">
+        <div
+          style="
+            position: relative;
+            left: 125px;
+            top: -75px;
+            background-color: #fdeedc;
+          "
+        >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet"><div class="typing-text">
+            <font size="6"><u><B>HEALTH</B></u></font>
+          </div>
+        </div>
+      </div>
+      <div class="audio">
+        <audio controls autoplay loop>
+          <source
+            src="Long Road.mp3" type="audio/mpeg"/>
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+      <div class="class2"><h3 align="right">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+        <font size="5">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Home.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Health.html" >Health</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Physical Health.html" >Physical</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Mental Health.html" >Mental</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Game.html" >Game</a> &nbsp;&nbsp;&nbsp;&nbsp;
+      </h3></font></banner
+    >
+    <style>
+      /* Style for the game elements */
+      body {
+        background-color: #fdeedc;
+        font-family: Arial, sans-serif;
+      }
+      img {
+  width: 7em;
+  margin-left: 7px;
+  margin-top: 7px;
+}
+.audio {
+  margin-top: -150px;
+  margin-left: 1030px;
+}
+.wrapper {
+  display: flex;
+}
+.typing-text {
+  font-family: "Teko", sans-serif;
+  width: 11ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #000;
+  front-family: monospace;
+  front-size: 2em;
+  animation: typing 2.5s steps(24), blink 0.5s step-end infinite alternate;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-colour: transparent;
+  }
+}
+.class1 {
+  font-family: "Righteous", cursive;
+}
+.class2 {
+  font-family: "Teko", sans-serif;
+}
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      input[type="text"] {
+        text-align: center;
+        width: 50%;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      input[type="submit"] {
+        text-align: center;
+        background: rgb(131, 58, 180);
+        background: rgb(0, 255, 246);
+        background: rgb(63, 94, 251);
+        background: rgb(63, 94, 251);
+        background: linear-gradient(
+          283deg,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+        color: white;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .class3{text-align: center;}
+    </style>
+  </head>
+  <body>
+    <div class="class3"><h1>Guess the Number</h1>
+    <p>Guess a number between 1 and 100:</p>
+    <input type="text" id="guess" />
+    <br />
+    <input type="submit" value="Guess" onclick="checkGuess()" />
+
+    <script>
+      // JavaScript code for the game logic
+      var number = Math.floor(Math.random() * 100) + 1;
+      var tries = 0;
+
+      function checkGuess() {
+        var guess = document.getElementById("guess").value;
+        tries++;
+        if (guess == number) {
+          alert(
+            "Congratulations! You guessed the number in " + tries + " tries."
+          );
+        } else if (guess < number) {
+          alert("Too low! Guess again.");
+        } else if (guess > number) {
+          alert("Too high! Guess again.");
+        }
+      }
+    </script>
+<font size="3"><footer><p>&copy; 2023 Health Matters. All rights reserved.</p>
+</font></footer>  
+</body>
+</html>
